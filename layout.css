@@ -366,8 +366,6 @@ ul#nav li.current a { color: #F06000; }
     -webkit-animation: pjs 2s ease;
 }
 
-
-
 @-moz-keyframes html {
   0%   { width: 0px;  }
   100% { width: 70%;  }
