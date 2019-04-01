@@ -337,7 +337,7 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .sql {
-    width: 50%;
+    width: 60%;
     -moz-animation: sql 2s ease;
     -webkit-animation: sql 2s ease;
 }
@@ -388,12 +388,12 @@ ul#nav li.current a { color: #F06000; }
 
 @-moz-keyframes sql {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 60%;  }
 }
 
 @-webkit-keyframes sql {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 60%;  }
 }
 
 @-moz-keyframes c {
