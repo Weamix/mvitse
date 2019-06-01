@@ -331,13 +331,13 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: html 2s ease;
 }
 .css {
-  	width: 70%;
+  	width: 80%;
   	-moz-animation: css 2s ease;
   	-webkit-animation: css 2s ease;
 }
 
 .sql {
-    width: 60%;
+    width: 70%;
     -moz-animation: sql 2s ease;
     -webkit-animation: sql 2s ease;
 }
@@ -349,7 +349,7 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .java {
-    width: 25%;
+    width: 50%;
     -moz-animation: java 2s ease;
     -webkit-animation: java 2s ease;
 }
@@ -393,22 +393,22 @@ ul#nav li.current a { color: #F06000; }
 
 @-moz-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 70%;  }
+  100% { width: 80%;  }
 }
 
 @-webkit-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 70%;  }
+  100% { width: 80%;  }
 }
 
 @-moz-keyframes sql {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 70%;  }
 }
 
 @-webkit-keyframes sql {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 70%;  }
 }
 
 @-moz-keyframes c {
@@ -423,12 +423,12 @@ ul#nav li.current a { color: #F06000; }
 
 @-moz-keyframes java {
   0%   { width: 0px;  }
-  100% { width: 25%;  }
+  100% { width: 50%;  }
 }
 
 @-webkit-keyframes java {
   0%   { width: 0px;  }
-  100% { width: 25%;  }
+  100% { width: 50%;  }
 }
 
 @-moz-keyframes uml {
