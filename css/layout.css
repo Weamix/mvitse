@@ -367,7 +367,7 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .javascript {
-    width: 35%;
+    width: 40%;
     -moz-animation: javascript 2s ease;
     -webkit-animation: javascript 2s ease;
 }
@@ -453,12 +453,12 @@ ul#nav li.current a { color: #F06000; }
 
 @-moz-keyframes javascript {
   0%   { width: 0px;  }
-  100% { width: 35%;  }
+  100% { width: 40%;  }
 }
 
 @-webkit-keyframes javascript {
   0%   { width: 0px;  }
-  100% { width: 35%;  }
+  100% { width: 40%;  }
 }
 
 @-moz-keyframes ref {
