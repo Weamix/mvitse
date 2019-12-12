@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+<meta charset='UTF-8'>
+<title>Puissance 4</title>
+<link rel="stylesheet" href="p4.css">
+</head>
+<body>
+<script type="text/javascript">
+
+//* tableau à 2 dimensions *//
+	
+var nbcase = 1; // Numéro de la première case
+
+document.write("<center><br><br><br><br><br><table>"); // initialise le tableau en l'écrivant dans le document
+
+for (var i = 0; i < 6; i++) { // 1ère boucle qui permet de créer les tr
+		
+document.write("<tr>");
+
+for (var j = 0; j < 7; j++) { // 2ème boucle qui permet de créer les td dans les tr
+			
+document.write("<td id="+nbcase+">"+nbcase+"</td>"); // affiche le numéro dans chaque case
+nbcase++; // un pas de 1, rajoute +1 pour chaque case
+
+}
+
+document.write("</tr>");
+
+}
+
+document.write("</table></center>"); // fermeture du tableau
+
+//* puissance 4 *//
+
+td = document.getElementsByTagName("td"); // crée un tableau indexé (avec des tds)
+
+for( var i = 0; i < td.length; i++ ) { //  la variable td est un tableau vu qu'il y a plusieurs éléments td  (42 exactement) pour ajouter un évènement onclick à chaque td, il faut utiliser une boucle
+
+var colorcoin = 2; // on déclare la variable colorcoin pour pouvoir utiliser le reste du nombre	
+td[i].onclick = function(){  // récupère l'id du td sur lequel on a cliqué
+
+var number = parseInt(this.id); // le "this" permet de récupérer l'objet de la fonction associé à un td et le "id" est l'attribut de l'objet , il nous donne simplement l'identifiant de l'objet.
+// this récupère le td[i] sur lequel on a cliqué
+// déclare variable number (case sur laquelle on a cliqué)
+
+console.log("case : " + number); // case=number
+
+ligne = Math.ceil(number/7); // Math.ceil() retourne le plus petit entier supérieur
+// La ligne  = le numéro de la case/7
+
+console.log("ligne : " + ligne); 
+
+down = number + ((6-ligne)*7) // fonction pour savoir la case la plus basse de la colonne
+
+console.log("down : " + down); // case la plus  basse de la colonne
+
+while(true){ //  boucle infini
+// While (true) est une boucle qui ne s'arrête pas toute seul, il faut la casser d'où le " break " , elle s'éxécute tant qu'une case vide n'a pas été trouvé sur la colonne
+
+console.log(document.getElementById(down).style.backgroundImage);
+
+if(document.getElementById(down).style.backgroundImage != 'url("jaune.png")' && document.getElementById(down).style.backgroundImage != 'url("rouge.png")' ){
+
+if (down > 0) { // si la colonne est pleine on stop la boucle pour pas faire une boucle qui ce stop jamais
+// on vérifie si la case est vide ou non si c'est le cas on mets un pion rouge ou jaune selon à qui c'est le tour
+if (colorcoin%2 == 1) { //savoir si colorcoin est paire ou impaire
+
+document.getElementById(down).style.background = "url(rouge.png)";colorcoin++;
+//pour que le coin change de couleur, il faut que colorcoin devienne paire ou impaire: donc on incrémente 1 au nombre
+
+}
+
+else{
+
+document.getElementById(down).style.background = "url(jaune.png)";colorcoin++;
+
+
+}
+}
+
+break; //break dans le if pour sortir de la boucle
+
+}
+
+else{
+
+down -=7;
+// si ce n'est pas vide, on passe à la case du dessus
+}
+
+}
+
+}
+
+}
+
+</script>
+</body>
+</html>
+
