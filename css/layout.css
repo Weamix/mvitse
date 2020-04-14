@@ -436,12 +436,12 @@ ul#nav li.current a { color: #F06000; }
   100% { width: 75%;  }
 }
 
-@-moz-keyframes javascript {
+@-moz-keyframes jquery {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
 
-@-webkit-keyframes javascript {
+@-webkit-keyframes jquery {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
